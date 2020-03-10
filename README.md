@@ -30,6 +30,6 @@ func main() {
 }
 ```
 
-```
+```curl
 curl --user john:doe http://localhost:3000
 ```
