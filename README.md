@@ -28,3 +28,7 @@ func main() {
   app.Listen(3000)
 }
 ```
+
+```
+curl --user john:doe http://localhost:3000
+```
