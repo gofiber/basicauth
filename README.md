@@ -1,3 +1,7 @@
+```
+go get -u github.com/gofiber/basicauth
+```
+
 ```go
 package main
 
