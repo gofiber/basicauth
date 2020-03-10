@@ -15,8 +15,8 @@ func main() {
 
   cfg := basicauth.Config{
     Users: map[string]string{
-      "john": "doe",
-      "admin": "123456",
+      "john":   "doe",
+      "admin":  "123456",
     },
   }
   app.Use(basicauth.New(cfg))
