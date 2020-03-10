@@ -6,8 +6,8 @@ go get -u github.com/gofiber/basicauth
 package main
 
 import 
-    "github.com/gofiber/fiber"
-    "github.com/gofiber/basicauth"
+  "github.com/gofiber/fiber"
+  "github.com/gofiber/basicauth"
 )
 
 func main() {
