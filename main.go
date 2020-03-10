@@ -51,8 +51,6 @@ func New(config ...Config) func(*fiber.Ctx) {
 	}
 	if cfg.Authorizer == nil {
 		cfg.Authorizer = func(user, pass string) bool {
-			fmt.Println(cfg.Users)
-			fmt.Println(user, pass)
 			if user == "" || pass == "" {
 				return false
 			}
