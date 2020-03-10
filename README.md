@@ -1,8 +1,9 @@
+### Install
 ```
 go get -u github.com/gofiber/fiber
 go get -u github.com/gofiber/basicauth
 ```
-
+### Example
 ```go
 package main
 
@@ -29,7 +30,7 @@ func main() {
   app.Listen(3000)
 }
 ```
-
+### Test
 ```curl
 curl --user john:doe http://localhost:3000
 ```
