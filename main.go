@@ -6,7 +6,6 @@ package basicauth
 
 import (
 	"encoding/base64"
-	"fmt"
 	"strings"
 
 	"github.com/gofiber/fiber"
@@ -14,9 +13,9 @@ import (
 
 // Config defines the config for BasicAuth middleware
 type Config struct {
-	// Skip defines a function to skip middleware.
+	// Filter defines a function to skip middleware.
 	// Optional. Default: nil
-	Skip func(*fiber.Ctx) bool
+	Filter func(*fiber.Ctx) bool
 	// Users defines the allowed credentials
 	// Required. Default: map[string]string{}
 	Users map[string]string
@@ -65,8 +64,8 @@ func New(config ...Config) func(*fiber.Ctx) {
 	}
 	// Return middleware handler
 	return func(c *fiber.Ctx) {
-		// Skip middleware if Skip returns true
-		if cfg.Skip != nil && cfg.Skip(c) {
+		// Filter request to skip middleware
+		if cfg.Filter != nil && cfg.Filter(c) {
 			c.Next()
 			return
 		}
