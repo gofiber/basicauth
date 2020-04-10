@@ -85,6 +85,7 @@ func New(config ...Config) func(*fiber.Ctx) {
 						pass := cred[i+1:]
 						// If exist & match in Users, we let him pass
 						if cfg.Authorizer(user, pass) {
+							c.Fasthttp.SetUserValue("BasicAuth", map[string]string{"username": user, "password": pass})
 							c.Next()
 							return
 						}
