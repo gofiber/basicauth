@@ -45,7 +45,8 @@ func main() {
 
   app.Get("/", func(c *fiber.Ctx) {
     basicAuth, _ := ctx.Fasthttp.Value("BasicAuth").(map[string]string)
-    username, password := basicAuth["username"], basicAuth["password"]
+    username := c.Locals("username").(string)
+		password := c.Locals("password").(string)
     fmt.Println(username, password)
     c.Send("Welcome!")
   })
