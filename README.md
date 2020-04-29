@@ -26,6 +26,8 @@ basicauth.New(config ...basicauth.Config) func(*fiber.Ctx)
 package main
 
 import (
+  "fmt"
+
   "github.com/gofiber/fiber"
   "github.com/gofiber/basicauth"
 )
@@ -42,6 +44,10 @@ func main() {
   app.Use(basicauth.New(cfg))
 
   app.Get("/", func(c *fiber.Ctx) {
+    basicAuth, _ := ctx.Fasthttp.Value("BasicAuth").(map[string]string)
+    username := c.Locals("username").(string)
+		password := c.Locals("password").(string)
+    fmt.Println(username, password)
     c.Send("Welcome!")
   })
 
