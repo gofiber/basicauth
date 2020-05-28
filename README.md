@@ -1,4 +1,9 @@
-### Basic Authentication
+# Basic Authentication
+
+![Test](https://github.com/gofiber/basicauth/workflows/Test/badge.svg)
+![Security](https://github.com/gofiber/basicauth/workflows/Security/badge.svg)
+![Linter](https://github.com/gofiber/basicauth/workflows/Linter/badge.svg)
+
 Basic auth middleware provides an HTTP basic authentication. It calls the next handler for valid credentials and `401 Unauthorized` for missing or invalid credentials.
 
 ### Install
