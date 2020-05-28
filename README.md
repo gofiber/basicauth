@@ -1,4 +1,11 @@
-### Basic Authentication
+# Basic Authentication
+
+![Release](https://img.shields.io/github/release/gofiber/basicauth.svg)
+[![Discord](https://img.shields.io/badge/discord-join%20channel-7289DA)](https://gofiber.io/discord)
+![Test](https://github.com/gofiber/basicauth/workflows/Test/badge.svg)
+![Security](https://github.com/gofiber/basicauth/workflows/Security/badge.svg)
+![Linter](https://github.com/gofiber/basicauth/workflows/Linter/badge.svg)
+
 Basic auth middleware provides an HTTP basic authentication. It calls the next handler for valid credentials and `401 Unauthorized` for missing or invalid credentials.
 
 ### Install
