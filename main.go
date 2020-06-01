@@ -87,6 +87,7 @@ func New(config ...Config) func(*fiber.Ctx) {
 						if cfg.Authorizer(user, pass) {
 							c.Locals("username", user)
 							c.Locals("password", pass)
+							c.Next()
 							return
 						}
 					}
